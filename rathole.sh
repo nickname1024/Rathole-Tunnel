@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Check if the script is run as root
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root" 
-   sleep 1
-   exit 1
-fi
-
 # Function to install unzip if not already installed
 install_unzip() {
     if ! command -v unzip &> /dev/null; then
